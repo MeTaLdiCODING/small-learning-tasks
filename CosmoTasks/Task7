@@ -1,0 +1,24 @@
+package homeworks.java.cosmo.string;
+
+/**
+ * Дана строка: ”Где мои деньги?”.
+ * Необходимо собрать предложение в обратном порядке: “Деньги мои где?”.
+ * Где мои деньги? -> Деньги мои где?
+ * <p>
+ * Используйте методы .split(),  .replace() и .replaceFirst() класса String
+ */
+public class ExG {
+    public static void main(String[] args) {
+        String input = "Где мои деньги?";
+       String lower = input.toLowerCase();
+      // String c = a.replaceFirst("д","Д");
+      String Replased = lower.replace('?', ' ');
+      String Replased2 = Replased.replace("д","Д");
+      String FirstRep = Replased2.replaceFirst("Д","д");
+      String[] x = FirstRep.split(" ");
+      String ConstrStr = x[2] +  x[1] + x[0];
+      String strRepl=ConstrStr.replace("и","и ");
+      String resultFinal=strRepl.replace("где","где?");
+System.out.println(resultFinal);
+    }
+}
