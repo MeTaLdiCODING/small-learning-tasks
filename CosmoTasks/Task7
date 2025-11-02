@@ -10,11 +10,14 @@ package homeworks.java.cosmo.string;
 public class ExG {
     public static void main(String[] args) {
         String input = "Где мои деньги?";
-       String lower = input.toLowerCase();
-       String Replased=lower.replace('?', ' ').replace("д","Д").replaceFirst("Д","д");
-      String[] x = Replased.split(" ");
-      String ConstrStr = x[2] +  x[1] + x[0];
-      String Result=ConstrStr.replace("и","и ").replace("где","где?");
-System.out.println(Result);
+        String lower = input.toLowerCase();
+        String Replased = lower
+                .replace('?', ' ')
+                .replace("д", "Д")
+                .replaceFirst("Д", "д");
+        String[] x = Replased.split(" ");
+        String ConstrStr = x[2] + x[1] + x[0];
+        String Result = ConstrStr.replace("и", "и ").replace("где", "где?");
+        System.out.println(Result);
     }
 }
