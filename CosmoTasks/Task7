@@ -17,7 +17,9 @@ public class ExG {
                 .replaceFirst("Д", "д");
         String[] x = Replased.split(" ");
         String ConstrStr = x[2] + x[1] + x[0];
-        String Result = ConstrStr.replace("и", "и ").replace("где", "где?");
+        String Result = ConstrStr
+                .replace("и", "и ")
+                .replace("где", "где?");
         System.out.println(Result);
     }
 }
