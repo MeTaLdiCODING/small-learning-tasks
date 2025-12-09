@@ -1,0 +1,66 @@
+public class Main {
+    public static void main(String[] args) {
+        Book bookOne = new Book();
+        bookOne.setTitle("1984");
+        bookOne.setAuthor("George Orwell");
+        bookOne.setYear(1949);
+
+        Book bookTwo = new Book();
+        bookTwo.setTitle("1984");
+        bookTwo.setAuthor("George Orwell");
+        bookTwo.setYear(1949);
+
+        Book bookThree = new Book();
+        bookThree.setTitle("Brave New World");
+        bookThree.setAuthor("Aldous Huxley");
+        bookThree.setYear(1932);
+
+        System.out.println(bookOne.equals(bookTwo)); // должно вернуть true
+        System.out.println(bookOne.equals(bookThree)); // должно вернуть false
+    }
+}
+
+class Book {
+
+    private String title;
+
+    private String author;
+
+    private int year;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if ( obj == null) return  false;
+        if (obj instanceof Book) {
+            Book book = (Book) obj;  // Теперь безопасно приводим тип
+            return book.getTitle().equals(this.getTitle()) &&
+                    book.getAuthor().equals(this.getAuthor()) &&
+                    book.getYear() == this.getYear();
+        }
+        return false;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public String getTitle(){
+        return title;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+}
