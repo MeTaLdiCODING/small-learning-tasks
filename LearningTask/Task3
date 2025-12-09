@@ -17,6 +17,8 @@ public class Main {
 
         System.out.println(bookOne.equals(bookTwo)); // должно вернуть true
         System.out.println(bookOne.equals(bookThree)); // должно вернуть false
+        System.out.println(bookOne.equals(bookTwo)); // должно вернуть true
+        System.out.println(bookOne.hashCode() == bookTwo.hashCode());  // должно быть равно book2.hashCode()
     }
 }
 
@@ -39,6 +41,13 @@ class Book {
                     book.getYear() == this.getYear();
         }
         return false;
+    }
+    @Override
+    public int hashCode() {
+        int result = 31;
+        result = 31 * result + this.getTitle().hashCode();
+        result = result * 17 * getAuthor().hashCode();
+        return result;
     }
 
     public void setTitle(String title) {
