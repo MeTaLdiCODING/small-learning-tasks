@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learning-java/DopTask/DopTask.iml" filepath="$PROJECT_DIR$/learning-java/DopTask/DopTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/learning-java/learning-java.iml" filepath="$PROJECT_DIR$/learning-java/learning-java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/small-learning-tasks.iml" filepath="$PROJECT_DIR$/.idea/small-learning-tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learning_java.iml" filepath="$PROJECT_DIR$/.idea/learning_java.iml" />
     </modules>
   </component>
 </project>
