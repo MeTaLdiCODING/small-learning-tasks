@@ -1,0 +1,18 @@
+
+/**
+ * Нужно привести строку с полным именем к инициалам.
+ * Например, "Носов Алексей Олегович" будет иметь вид: "Н.А.О."
+ * Носов Алексей Олегович -> Н.А.О.
+ * <p>
+ * Подсказка: используйте методы .split() и .charAt() класса String
+ */
+public class Task8 {
+    public static void main(String[] args) {
+        String fullName = "Носов Алексей Олегович";
+        String splited[] = fullName.split(" ");
+        char sim0 = splited[0].charAt(0);
+        char sim1 = splited[1].charAt(0);
+        char sim2 = splited[2].charAt(0);
+        System.out.println(sim0 + "." + sim1 + "." + sim2 + ".");
+    }
+}

@@ -1,0 +1,16 @@
+
+/**
+ * Создайте программу,
+ * которая на вход получает строку “Мама мыла Милу мылом!” и выводит её в обратном порядке.
+ * Мама мыла Милу мылом! -> !молым улим алым амаМ
+ * <p>
+ * Подсказка: используйте метод .reverse() класса StringBuilder
+ */
+public class Task3{
+  public static void main(String[] args) {
+    String input = "Мама мыла Милу мылом!";
+    StringBuilder sb = new StringBuilder(input);
+    sb.reverse();
+    System.out.println(sb);
+  }
+}

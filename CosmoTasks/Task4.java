@@ -1,0 +1,15 @@
+
+/**
+ * Напишите программу,
+ * которая на вход получает строку “Мама мыла Милу мылом!” и выводит её без пробелов.
+ * Мама мыла Милу мылом! -> МамамылаМилумылом!
+ * <p>
+ * Подсказка: используйте метод .replace() класса String
+ */
+public class Task4 {
+    public static void main(String[] args) {
+        String input = "Мама мыла Милу мылом!";
+     String replacedStr = input.replace(" ","");
+     System.out.println(replacedStr);
+    }
+}

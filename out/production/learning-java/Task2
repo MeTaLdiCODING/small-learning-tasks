@@ -1,0 +1,41 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle vehicle = new Vehicle();
+        Vehicle car = new Car();
+        Vehicle electricCar = new ElectricCar();
+        Vehicle kickstarter = new Kickstarter();
+
+        vehicle.startEngine();
+        car.startEngine();
+        electricCar.startEngine();
+        kickstarter.startEngine();
+    }
+}
+
+class Vehicle { // модификтор доступа для класса дописывать НЕ нужно
+
+    protected void startEngine() {
+        System.out.println("Engine started");
+    }
+}
+
+class Car extends Vehicle { // модификтор доступа для класса дописывать НЕ нужно
+     @Override
+    public void startEngine() {
+        System.out.println("Car engine started with a key");
+    }
+}
+
+class ElectricCar extends Car { // модификтор доступа для класса дописывать НЕ нужно
+
+    @Override
+    public void startEngine() {
+        System.out.println("Electric car started silently");
+    }
+}
+class Kickstarter extends ElectricCar{
+    public void startEngine(){
+        System.out.println("Kickstarter used");
+    }
+}

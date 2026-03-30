@@ -1,0 +1,18 @@
+
+
+/**
+ * Напишите программу,
+ * которая на вход получает строку “Мама мыла Милу мылом!”
+ * и выводит каждый символ строки на отдельной строке.
+ * <p>
+ * Подсказка: используйте метод .toCharArray() класса String
+ */
+public class Task1 {
+    public static void main(String[] args) {
+     String input = "Мама мыла Милу мылом!";
+        char[] result = input.toCharArray();
+        for(int i=0; i<result.length;i++){  
+      System.out.println(result[i]);
+        }
+    }
+}  
